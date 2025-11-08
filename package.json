@@ -6,10 +6,11 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "lint:dev": "eslint . --ext .ts,.tsx",
-    "lint:fix": "eslint . --ext .ts,.tsx --fix",
-    "format": "prettier --write --ignore-path .gitignore ."
+    "lint": "eslint",
+    "lint:fix": "eslint --fix",
+    "prettier": "prettier --check .",
+    "format": "prettier --write --ignore-path .gitignore .",
+    "type-check": "tsc --project tsconfig.json --pretty --noEmit && eslint --fix . && prettier --write ."
   },
   "dependencies": {
     "next": "16.0.1",
@@ -22,8 +23,9 @@
     "@types/node": "^24.10.0",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "eslint": "^9",
-    "eslint-config-next": "16.0.1",
+    "eslint": "^9.39.1",
+    "eslint-config-next": "^16.0.1",
+    "eslint-config-prettier": "^10.1.8",
     "prettier": "^3.6.1",
     "prettier-plugin-tailwindcss": "^0.7.1",
     "tailwindcss": "^4",
